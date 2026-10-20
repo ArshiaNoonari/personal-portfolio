@@ -1,27 +1,4 @@
-/* ==========================================================
-   Arshia Noonari | Portfolio
-   Dark purple theme, pure HTML + CSS (no JavaScript)
 
-   Contents
-   1. Reset & tokens
-   2. Navigation
-   3. Hero
-   4. Shared section styles
-   5. About
-   6. Skills
-   7. Projects
-   8. Experience
-   9. Contact & footer
-   10. Keyframes
-   11. Scroll reveal
-   12. Extra effects
-   13. Responsive
-   14. Reduced motion
-   ========================================================== */
-
-
-/* 1. RESET & TOKENS
-   ---------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -62,7 +39,7 @@ body {
   border-radius: 4px;
 }
 
-/* Gradient text (shared) */
+
 .logo,
 h1 span,
 .stat-card .num,
@@ -74,8 +51,6 @@ h1 span,
 }
 
 
-/* 2. NAVIGATION
-   ---------------------------------------------------------- */
 nav {
   position: fixed;
   top: 0;
@@ -134,8 +109,6 @@ nav {
 }
 
 
-/* 3. HERO
-   ---------------------------------------------------------- */
 #hero {
   position: relative;
   display: flex;
@@ -279,9 +252,6 @@ h1 span {
   transform: translateY(-2px);
 }
 
-
-/* 4. SHARED SECTION STYLES
-   ---------------------------------------------------------- */
 section {
   padding: 6rem 6%;
   scroll-margin-top: 40px;
@@ -326,8 +296,7 @@ section {
 }
 
 
-/* 5. ABOUT
-   ---------------------------------------------------------- */
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -378,8 +347,7 @@ section {
 }
 
 
-/* 6. SKILLS
-   ---------------------------------------------------------- */
+
 .marquee {
   margin: 0 -6% 2.5rem;
   padding: 1rem 0;
@@ -440,8 +408,6 @@ section {
 }
 
 
-/* 7. PROJECTS
-   ---------------------------------------------------------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
@@ -548,8 +514,7 @@ section {
 }
 
 
-/* 8. EXPERIENCE
-   ---------------------------------------------------------- */
+
 .timeline {
   max-width: 680px;
 }
@@ -611,8 +576,7 @@ section {
 }
 
 
-/* 9. CONTACT & FOOTER
-   ---------------------------------------------------------- */
+
 #contact {
   text-align: center;
 }
@@ -665,8 +629,6 @@ footer {
 }
 
 
-/* 10. KEYFRAMES
-   ---------------------------------------------------------- */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: none; }
@@ -710,9 +672,7 @@ footer {
 }
 
 
-/* 11. SCROLL REVEAL (pure CSS, modern browsers only;
-       others simply show the content normally)
-   ---------------------------------------------------------- */
+
 @supports (animation-timeline: view()) {
   .section-label,
   .section-title,
@@ -730,8 +690,7 @@ footer {
 }
 
 
-/* 12. EXTRA EFFECTS
-   ---------------------------------------------------------- */
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -744,7 +703,7 @@ footer {
   inherits: false;
 }
 
-/* Twinkling, drifting stars behind the hero */
+
 #hero::before,
 #hero::after {
   content: "";
@@ -770,7 +729,7 @@ footer {
   animation: twinkle 5s -2s ease-in-out infinite, drift 60s linear infinite;
 }
 
-/* Floating code window that types itself (wide screens only) */
+
 .code-window {
   position: absolute;
   right: 6%;
@@ -823,7 +782,7 @@ footer {
 .line .p { color: #8ab4ff; }
 .line .s { color: #7be0a0; }
 
-/* Primary button: periodic shine */
+
 .btn-primary {
   position: relative;
   overflow: hidden;
@@ -838,7 +797,7 @@ footer {
   animation: shine 4s 2.5s infinite;
 }
 
-/* Section titles get a gradient underline */
+
 .section-title::after {
   content: "";
   display: block;
@@ -854,7 +813,7 @@ footer {
   margin-inline: auto;
 }
 
-/* Project cards: spinning gradient border on hover */
+
 .project-card:hover {
   border-color: transparent;
   background:
@@ -863,7 +822,7 @@ footer {
   animation: spin-border 3s linear infinite;
 }
 
-/* Small hover touches */
+
 .tag {
   transition: background 0.3s, transform 0.2s;
 }
@@ -873,9 +832,9 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Scroll-driven effects (modern browsers only) */
+
 @supports (animation-timeline: view()) {
-  /* Stats count up from 0 as they scroll into view */
+
   .stat-card .num[data-count] {
     --n: var(--to);
     font-size: 0;
@@ -897,7 +856,7 @@ footer {
   }
 }
 
-/* Scroll progress bar under the nav */
+
 @supports (animation-timeline: scroll()) {
   nav::after {
     content: "";
@@ -952,7 +911,6 @@ footer {
   from { --n: 0; }
 }
 
-/* Below 1200px the code window moves under the hero text instead of floating beside it */
 @media (max-width: 1199px) {
   #hero {
     flex-direction: column;
@@ -983,8 +941,7 @@ footer {
 }
 
 
-/* 13. RESPONSIVE
-   ---------------------------------------------------------- */
+
 @media (max-width: 768px) {
   nav {
     padding: 1rem 5%;
@@ -1013,7 +970,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  /* Logo on top, links in one scrollable row (they are no longer hidden) */
+ 
   nav {
     flex-direction: column;
     gap: 0.4rem;
@@ -1103,8 +1060,7 @@ footer {
 }
 
 
-/* 14. REDUCED MOTION
-   ---------------------------------------------------------- */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation: none !important;
@@ -1116,7 +1072,7 @@ footer {
     border-right: 0;
   }
 
-  /* Show the code lines fully when typing is switched off */
+
   .line {
     width: var(--w);
   }
